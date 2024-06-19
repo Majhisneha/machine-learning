@@ -31,6 +31,11 @@ Celal Turkmen \
 semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
 Code output: \
 ![Celal Coverage](sources/celal_coverage.png) \
+
+Enis Kerem Cakmak \
+addData(self, id0, x, y) and setLineStyle(self, id=None, **kwargs) from pybrain\tools\plotting\multiline.py \
+Code output: \
+!#TODO ENIS \
 ## Coverage improvement
 
 ### Individual tests
