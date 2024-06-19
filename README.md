@@ -27,38 +27,10 @@ Listen()
 https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
 ![Function 2 Yaïr Coverage](sources/function2_Yair_coverage.png)
 
-Celal Turkmen
-semilinear(x) and explnPrime(x) from pybrain/tools/functions.py
-Code output:
-```
-Branch coverage for semilinear before calling the function: 
-Branch coverage for  semilinear   {1: False, 2: False, 3: False, 4: False}
-Coverage is  0.0 %
-Branch coverage for semilinear after Test 1: 
-Branch coverage for  semilinear   {1: True, 2: False, 3: False, 4: True}
-Coverage is  50.0 %
-Branch coverage for semilinear after Test 2: 
-Branch coverage for  semilinear   {1: True, 2: False, 3: True, 4: True}
-Coverage is  75.0 %
-Branch coverage for semilinear after Test 3: 
-Branch coverage for  semilinear   {1: True, 2: True, 3: True, 4: True}
-Coverage is  100.0 %
-Full branch coverage for semilinear achieved
-Branch coverage for explnPrime before calling the function: 
-Branch coverage for  explnPrime   {1: False, 2: False, 3: False, 4: False}
-Coverage is  0.0 %
-Branch coverage for explnPrime after Test 1: 
-Branch coverage for  explnPrime   {1: False, 2: True, 3: True, 4: False}
-Coverage is  50.0 %
-Branch coverage for explnPrime after Test 2: 
-Branch coverage for  explnPrime   {1: True, 2: True, 3: True, 4: False}
-Coverage is  75.0 %
-Branch coverage for explnPrime after Test 3: 
-Branch coverage for  explnPrime   {1: True, 2: True, 3: True, 4: True}
-Coverage is  100.0 %
-Full branch coverage for explnPrime achieved
-```
-
+Celal Turkmen \
+semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
+Code output: \
+![Celal Coverage](sources/celal_coverage) \
 ## Coverage improvement
 
 ### Individual tests
