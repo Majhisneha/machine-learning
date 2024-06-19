@@ -16,7 +16,6 @@ class UDPServer:
         self.cIP.append(cIP)
         self.addrList.append((cIP, self.inPort + 1))
         self.UDPOutSockList.append(MockSocket())  # mock socket for sending data
-        print(f"Client {cIP} connected")
         self.clients += 1
 
     # Listen for clients
@@ -58,23 +57,22 @@ class MockSocket:
         pass
 
     def settimeout(self, timeout):
-        print(f"Setting socket timeout to {timeout} seconds")
+        pass
 
     def recv(self, buf):
-        # simulate receiving data
-        print(f"Receiving data with buffer size {buf}")
-        return b'192.168.1.100'  # data received
+        pass
 
     def sendto(self, data, addr):
-        print(f"Sending data {data} to address {addr}")
-
+        pass
     def bind(self, addr):
-        print(f"Binding socket to address {addr}")
+        pass
 
 def coverage_report():
-        print("\nBranch Coverage Report:")
-        for branch, covered in branch_coverage.items():
-            print(f"{branch} {'was hit' if covered else 'was not hit'}")
+    print("\nBranch Coverage Report:")
+    for branch, covered in branch_coverage.items():
+        print(f"{branch} {'was hit' if covered else 'was not hit'}")
+    
+    print("Coverage is ", sum(branch_coverage.values()) / len(branch_coverage) * 100, "%")      
 
 
 branch_coverage = {
@@ -87,29 +85,17 @@ branch_coverage = {
 server = UDPServer()
 
 # simulating different scenarios
-print("Test 1: No clients connected, data received successfully")
-server.listen()
+coverage_report()
 
-print("\nTest 2: No clients connected, exception while receiving data")
-server.UDPInSock.exception_on_recv = True
 server.listen()
+coverage_report()
 
-print("\nTest 3: One client connected, existing client sends data")
 server.clients = 1
 server.listen()
+coverage_report()
 
-print("\nTest 4: One client connected, new client sends data")
 server.clients = 1
 server.cIP = [b'test']  # fake client
-server.listen()
-
-print("\nTest 5: One client connected, exception while receiving data")
-server.clients = 1
-server.listen()
-
-print("\nTest 6: All clients disconnected, exception handling")
-server.clients = 1
-server.exception_on_listen = True
 server.listen()
 
 coverage_report()

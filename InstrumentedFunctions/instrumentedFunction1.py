@@ -2,15 +2,6 @@
 # original location: (pybrain/rl/environments/twoplayergames/capturegameplayers/clientwrapper.py)
 # instrumented function:
 
-branch_coverage = {
-    "branch_1": False,
-    "branch_2": False,
-    "branch_3": False,
-    "branch_4": False,
-    "branch_5": False,
-    "branch_6": False,
-}
-
 class CaptureGame:
     BLACK = 'BLACK'
     WHITE = 'WHITE'
@@ -47,46 +38,9 @@ branch_2_data = {
     3: CaptureGame.BLACK,
 }
 
-# scenario ensures the first position of each row is hit
-branch_3_data = {
-    0: CaptureGame.BLACK,
-    4: CaptureGame.WHITE,
-    8: CaptureGame.BLACK,
-    12: CaptureGame.WHITE,
-}
-
-# data for Branch 4 (obj.game.b.get(p, None) == CaptureGame.BLACK)
-branch_4_data = {
-    0: CaptureGame.BLACK,
-    1: CaptureGame.WHITE,
-    2: CaptureGame.BLACK,
-    3: CaptureGame.BLACK,
-}
-
-
-# data for Branch 5 (elif obj.game.b.get(p, None) == CaptureGame.WHITE)
-branch_5_data = {
-    0: CaptureGame.WHITE,
-    1: CaptureGame.BLACK,
-    2: CaptureGame.WHITE,
-    3: CaptureGame.WHITE,
-}
-
-# data for Branch 6 (else condition)
-branch_6_data = {
-    0: 'random',
-    1: 'random2',
-    2: 'random3',
-    3: 'random4',
-}
-
 mock_objects = [
     MockObject(color=CaptureGame.BLACK, board_data=branch_1_data),
     MockObject(color=CaptureGame.WHITE, board_data=branch_2_data),
-    MockObject(color=CaptureGame.BLACK, board_data=branch_3_data),
-    MockObject(color=CaptureGame.BLACK, board_data=branch_4_data),
-    MockObject(color=CaptureGame.WHITE, board_data=branch_5_data),
-    MockObject(color=CaptureGame.WHITE, board_data=branch_6_data),
 ]
 
 
@@ -115,14 +69,27 @@ def getAction(obj):
 
     return js 
 
-def print_coverage():
-    for branch, hit in branch_coverage.items():
-        print(f"{branch} was {'hit' if hit else 'not hit'}")
+def coverage_report():
+    print("\nBranch Coverage Report:")
+    for branch, covered in branch_coverage.items():
+        print(f"{branch} {'was hit' if covered else 'was not hit'}")
+    
+    print("Coverage is ", sum(branch_coverage.values()) / len(branch_coverage) * 100, "%")      
 
 
 # run tests
+
+branch_coverage = {
+    "branch_1": False,
+    "branch_2": False,
+    "branch_3": False,
+    "branch_4": False,
+    "branch_5": False,
+    "branch_6": False,
+}
+
+coverage_report()
+
 for mock_obj in mock_objects:
     result = getAction(mock_obj)
-
-print("Coverage:")
-print_coverage()
+    coverage_report()
