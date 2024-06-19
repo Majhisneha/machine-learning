@@ -30,7 +30,7 @@ https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9
 Celal Turkmen \
 semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
 Code output: \
-![Celal Coverage](sources/celal_coverage) \
+![Celal Coverage](sources/celal_coverage.png) \
 ## Coverage improvement
 
 ### Individual tests
