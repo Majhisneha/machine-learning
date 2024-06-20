@@ -125,17 +125,21 @@ class MultilinePlotter:
 
 def print_coverage(branch_coverage):
     totalHit = 0
+    coverage_report = []
     for branch, hit in branch_coverage.items():
         if hit:
-            print(branch + " is hit")
+            status = "Hit"
             totalHit = totalHit + 1
         else:
-            print(branch + " is not hit")
+            status = "Not hit"
+        coverage_report.append(branch + ": " + status)
+    print(", ".join(coverage_report))
     print("Total coverage percent: " + (str)(totalHit / len(branch_coverage) * 100) + "%")
 
 
 plotter = MultilinePlotter(maxLines=3)
 print("-------------BRANCH COVERAGE FOR ADD_DATA-----------------")
+print("Total branch number: " + (str)(len(branch_coverage_addData.items())))
 print("Before any testcases: ")
 print_coverage(branch_coverage_addData)
 
@@ -145,13 +149,11 @@ print("After first testcase:")
 print_coverage(branch_coverage_addData)
 print("After second testcase:")
 plotter.addData(1, [3, 4], [5, 6])
-
-
-print("Coverage:")
 print_coverage(branch_coverage_addData)
 
 
 print("-------------BRANCH COVERAGE FOR SET_LINE_STYLE-----------------")
+print("Total branch number: " + (str)(len(branch_coverage_setLineStyle.items())))
 print("Before any testcases: ")
 print_coverage(branch_coverage_setLineStyle)
 
