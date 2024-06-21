@@ -22,7 +22,6 @@ class MockObject:
         if board_data:
             self.game.b = board_data
 
-# data for Branch 1 (obj.color == CaptureGame.BLACK)
 branch_1_data = {
     0: CaptureGame.BLACK,   
     1: CaptureGame.WHITE,
@@ -30,7 +29,6 @@ branch_1_data = {
     3: CaptureGame.WHITE,
 }
 
-# data for Branch 2 (else condition)
 branch_2_data = {
     0: CaptureGame.WHITE,    
     1: CaptureGame.BLACK,

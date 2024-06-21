@@ -20,11 +20,11 @@ It was executed by the command `coverage run -m unittest discover `
 
 Yaïr Jacob
 getAction()
-https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
+## ADD GIT AFTER PULL FROM BRANCH TO MAIN
 ![Function 1 Yaïr Coverage](sources/function1_Yair_coverage.png)
 
 Listen()
-https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
+ ## ADD GIT AFTER PULL FROM BRANCH TO MAIN
 ![Function 2 Yaïr Coverage](sources/function2_Yair_coverage.png)
 
 Celal Turkmen \
