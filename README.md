@@ -35,7 +35,7 @@ Code output: \
 Enis Kerem Cakmak \
 addData(self, id0, x, y) and setLineStyle(self, id=None, **kwargs) from pybrain\tools\plotting\multiline.py \
 Code output: \
-![Enis Coverage](sources/enis_coverage.png) \
+![Enis Coverage](sources/enis_coverage.PNG) \
 ## Coverage improvement
 
 ### Individual tests
