@@ -68,4 +68,8 @@ Code output: \
 
 ## Statement of individual contributions
 
-<Write what each group member did>
+Celal Turkmen: I've done the following:
+- Found the project and checked if it meets the requirements.
+- Instrumented the aforementioned functions.
+- Showed the improvement of the coverage thanks to the instrumented functions in the report.
+- Completed my own part in the report.
