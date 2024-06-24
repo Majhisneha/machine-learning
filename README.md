@@ -4,9 +4,9 @@
 
 Name: pybrain
 
-URL: https://github.com/pybrain/pybrain  ->> !!! We need to put our fork? or original git?
+URL: https://github.com/pybrain/pybrain
 
-Number of lines of code and the tool used to count it: 158447 (lizard)
+Number of lines of code and the tool used to count it: 27148 (lizard)
 
 Programming language: Python
 
@@ -18,6 +18,7 @@ We used Coverage.py as the existing tool to check the coverage of our forked pro
 It was executed by the command `coverage run -m unittest discover `
 ![Coverage results](sources/coverage.png)
 
+### Your own coverage tool
 Yaïr Jacob
 getAction()
 https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
@@ -29,6 +30,7 @@ https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9
 
 Celal Turkmen \
 semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
+![Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/4f6d168feb45c2e99709aa0c82eaede21168f136) \
 Code output: \
 ![Celal Coverage](sources/celal_coverage.png) \
 
