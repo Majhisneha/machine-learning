@@ -16,7 +16,7 @@ Programming language: Python
 
 We used Coverage.py as the existing tool to check the coverage of our forked project.
 It was executed by the command `coverage run -m unittest discover `
-![Coverage results](sources/old_coverage.png) \
+![Coverage results](sources/old_coverage.png)
 
 ### Your own coverage tool
 Yaïr Jacob
@@ -37,7 +37,7 @@ Code output: \
 Enis Kerem Cakmak \
 addData(self, id0, x, y) and setLineStyle(self, id=None, **kwargs) from pybrain\tools\plotting\multiline.py \
 Code output: \
-![Enis Coverage](sources/enis_coverage.PNG) \
+![Enis Coverage](sources/enis_coverage.PNG)
 ## Coverage improvement
 
 ### Individual tests
@@ -63,9 +63,9 @@ Code output: \
 Celal Turkmen
 <Test 1 & 2 (both are in the same file, so cannot make it separately> \
 
-![Old Coverage](sources/old_coverage.png) \
+![Old Coverage](sources/old_coverage.png)
 
-![New Coverage](sources/celal_improvement.png) \
+![New Coverage](sources/celal_improvement.png)
 
 Covered statements are increased from 10753 to 10797. This is because test_celal.py file under test/unittest folder includes some test cases covering the statements in tools/functions.py.
 
