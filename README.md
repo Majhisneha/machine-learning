@@ -19,7 +19,7 @@ It was executed by the command `coverage run -m unittest discover `
 ![Coverage results](sources/old_coverage.png)
 
 ### Your own coverage tool
-Yaïr Jacob
+#### Yaïr Jacob
 getAction()
 https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
 ![Function 1 Yaïr Coverage](sources/function1_Yair_coverage.png)
@@ -28,13 +28,13 @@ Listen()
 https://github.com/24x6fhy/SEP_pybrain/commit/b3d11cd991ae373f2a1c8d62f4a3cca4b9b841b0
 ![Function 2 Yaïr Coverage](sources/function2_Yair_coverage.png)
 
-Celal Turkmen \
+#### Celal Turkmen
 semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
-![Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/4f6d168feb45c2e99709aa0c82eaede21168f136) \
+[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/4f6d168feb45c2e99709aa0c82eaede21168f136) \
 Code output: \
-![Celal Coverage](sources/celal_coverage.png) \
+![Celal Coverage](sources/celal_coverage.png)
 
-Enis Kerem Cakmak \
+#### Enis Kerem Cakmak
 addData(self, id0, x, y) and setLineStyle(self, id=None, **kwargs) from pybrain\tools\plotting\multiline.py \
 Code output: \
 ![Enis Coverage](sources/enis_coverage.PNG)
@@ -60,24 +60,26 @@ Code output: \
 
 <Provide the same kind of information provided for Test 1>
 
-Celal Turkmen
-<Test 1 & 2 (both are in the same file, so cannot make it separately> \
+#### Celal Turkmen
 
+Note: Test 1 & 2 are both in the same file, so I did not make it separately.
+
+Old coverage: \
 ![Old Coverage](sources/old_coverage.png)
-
+New coverage: \
 ![New Coverage](sources/celal_improvement.png)
 
 Covered statements are increased from 10753 to 10797. This is because test_celal.py file under test/unittest folder includes some test cases covering the statements in tools/functions.py.
 
 ### Overall
-
-![Old Coverage](sources/old_coverage.png) \
+Old Coverage:
+![Old Coverage](sources/old_coverage.png)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
 ## Statement of individual contributions
 
-Celal Turkmen: I've done the following:
+### Celal Turkmen
 - Found the project and checked if it meets the requirements.
 - Instrumented the aforementioned functions.
 - Showed the improvement of the coverage thanks to the instrumented functions in the report.
