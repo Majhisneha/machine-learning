@@ -6,13 +6,17 @@ from scipy.linalg import inv, det, svd, logm, expm
 import warnings
 warnings.filterwarnings("ignore") # suppress warnings for deprecated functions
 
-def printBranchCoverage(branch_coverage, function_name):
-    print("Branch coverage for ", function_name, " ", branch_coverage)
-    print("Coverage is ", sum(branch_coverage.values()) / len(branch_coverage) * 100, "%")
-
 # Data structures to keep track of branch coverage
 branch_coverage_semilinear = {1: False, 2: False, 3: False, 4: False}
 branch_coverage_explnPrime = {1: False, 2: False, 3: False, 4: False}
+
+def printBranchCoverageSemilinear():
+    print("Branch coverage for semilinear: ", branch_coverage_semilinear)
+    print("Coverage is ", sum(branch_coverage_semilinear.values()) / len(branch_coverage_semilinear) * 100, "%")
+
+def printBranchCoverageExplnPrime():
+    print("Branch coverage for explnPrime: ", branch_coverage_semilinear)
+    print("Coverage is ", sum(branch_coverage_explnPrime.values()) / len(branch_coverage_explnPrime) * 100, "%")
 
 def semilinear(x):
     """ This function ensures that the values of the array are always positive. It is
@@ -180,36 +184,3 @@ def sqrtm(M):
     r = real_if_close(expm(0.5 * logm(M)), 1e-8)
     return (r + r.T) / 2
 
-print("Branch coverage for semilinear before calling the function: ")
-printBranchCoverage(branch_coverage_semilinear, "semilinear")
-
-semilinear(array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
-print("Branch coverage for semilinear after Test 1: ")
-printBranchCoverage(branch_coverage_semilinear, "semilinear")
-
-semilinear(array([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]))
-print("Branch coverage for semilinear after Test 2: ")
-printBranchCoverage(branch_coverage_semilinear, "semilinear")
-
-semilinear((1,1))
-print("Branch coverage for semilinear after Test 3: ")
-printBranchCoverage(branch_coverage_semilinear, "semilinear")
-
-print("Full branch coverage for semilinear achieved")
-
-print("Branch coverage for explnPrime before calling the function: ")
-printBranchCoverage(branch_coverage_explnPrime, "explnPrime")
-
-explnPrime(array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
-print("Branch coverage for explnPrime after Test 1: ")
-printBranchCoverage(branch_coverage_explnPrime, "explnPrime")
-
-explnPrime(array([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]))
-print("Branch coverage for explnPrime after Test 2: ")
-printBranchCoverage(branch_coverage_explnPrime, "explnPrime")
-
-explnPrime(404)
-print("Branch coverage for explnPrime after Test 3: ")
-printBranchCoverage(branch_coverage_explnPrime, "explnPrime")
-
-print("Full branch coverage for explnPrime achieved")

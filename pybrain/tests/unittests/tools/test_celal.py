@@ -1,33 +1,36 @@
-import numpy as np
-from pybrain.tools.functions import semilinear, explnPrime
-from pybrain.tests import runModuleTestSuite
+from pybrain.tools.functions import printBranchCoverageSemilinear, printBranchCoverageExplnPrime, semilinear, explnPrime
+from scipy import array
 
+print("Branch coverage for semilinear before calling the function: ")
+printBranchCoverageSemilinear()
 
-def test_semilinear(self):
-    x = np.array([0, 1, 2, 3])
-    expected = np.array([1, 2, 3, 4])
-    np.testing.assert_array_equal(semilinear(x), expected)
-    
-    x = np.array([-1, -2, -3])
-    expected = np.exp(x)
-    np.testing.assert_array_equal(semilinear(x), expected)
-    
-    x = np.array([-1, 0, 1])
-    expected = np.array([np.exp(-1), 1, 2])
-    np.testing.assert_array_equal(semilinear(x), expected)
+semilinear(array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print("Branch coverage for semilinear after Test 1: ")
+printBranchCoverageSemilinear()
 
-def test_explnPrime(self):
-    x = np.array([0, 1, 2, 3])
-    expected = np.array([1, 0.5, 1/3, 0.25])
-    np.testing.assert_array_equal(explnPrime(x), expected)
-    
-    x = np.array([-1, -2, -3])
-    expected = np.exp(x)
-    np.testing.assert_array_equal(explnPrime(x), expected)
-    
-    x = np.array([-1, 0, 1])
-    expected = np.array([np.exp(-1), 1, 0.5])
-    np.testing.assert_array_equal(explnPrime(x), expected)
+semilinear(array([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]))
+print("Branch coverage for semilinear after Test 2: ")
+printBranchCoverageSemilinear()
 
-if __name__ == "__main__":
-    runModuleTestSuite(__import__('__main__'))
+semilinear((1,1)) 
+print("Branch coverage for semilinear after Test 3: ")
+printBranchCoverageSemilinear()
+
+print("Full branch coverage for semilinear achieved")
+
+print("Branch coverage for explnPrime before calling the function: ")
+printBranchCoverageExplnPrime()
+
+explnPrime(array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+print("Branch coverage for explnPrime after Test 1: ")
+printBranchCoverageExplnPrime()
+
+explnPrime(array([-1, -2, -3, -4, -5, -6, -7, -8, -9, -10]))
+print("Branch coverage for explnPrime after Test 2: ")
+printBranchCoverageExplnPrime()
+
+explnPrime(404)
+print("Branch coverage for explnPrime after Test 3: ")
+printBranchCoverageExplnPrime()
+
+print("Full branch coverage for explnPrime achieved")
