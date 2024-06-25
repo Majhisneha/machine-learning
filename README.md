@@ -16,7 +16,7 @@ Programming language: Python
 
 We used Coverage.py as the existing tool to check the coverage of our forked project.
 It was executed by the command `coverage run -m unittest discover `
-![Coverage results](sources/coverage.png)
+![Coverage results](sources/old_coverage.png) \
 
 ### Your own coverage tool
 Yaïr Jacob
@@ -60,9 +60,18 @@ Code output: \
 
 <Provide the same kind of information provided for Test 1>
 
+Celal Turkmen
+<Test 1 & 2 (both are in the same file, so cannot make it separately> \
+
+![Old Coverage](sources/old_coverage.png) \
+
+![New Coverage](sources/celal_improvement.png) \
+
+Covered statements are increased from 10753 to 10797. This is because test_celal.py file under test/unittest folder includes some test cases covering the statements in tools/functions.py.
+
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+![Old Coverage](sources/old_coverage.png) \
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
