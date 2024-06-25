@@ -1,6 +1,6 @@
 __author__ = 'Tom Schaul, tom@idsia.ch'
 
-from scipy import reshape, dot, outer
+from numpy import reshape, dot, outer
 
 from pybrain.structure.connections.connection import Connection
 from pybrain.structure.parametercontainer import ParameterContainer
