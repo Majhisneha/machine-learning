@@ -8,3 +8,4 @@ plotter.setLineStyle(color="red", linestyle="--")
 plotter.setLineStyle(id=[0, 1], color="blue", linestyle="-.")
 plotter.setLineStyle(id=1, color="green", linestyle=":")
 plotter.setLineStyle(id=-1, color="black", linestyle="-")
+#Testing file for the functions addData and setLineStyle
