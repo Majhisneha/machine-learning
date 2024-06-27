@@ -1,4 +1,6 @@
-__author__ = 'Yaïr Jacob'
+# Yaïr Jacob
+# original location: pybrain/structure/modules/gaussianlayer.py
+# instrumented function:
 
 from scipy import random
 from pybrain.structure.modules.neuronlayer import NeuronLayer
