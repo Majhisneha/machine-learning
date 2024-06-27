@@ -4,9 +4,9 @@
 
 Name: pybrain
 
-URL: https://github.com/pybrain/pybrain  ->> !!! We need to put our fork? or original git?
+URL: https://github.com/pybrain/pybrain
 
-Number of lines of code and the tool used to count it: 158447 (lizard)
+Number of lines of code and the tool used to count it: 27148 (lizard)
 
 Programming language: Python
 
@@ -16,49 +16,68 @@ Programming language: Python
 
 We used Coverage.py as the existing tool to check the coverage of our forked project.
 It was executed by the command `coverage run -m unittest discover `
-![Coverage results](sources/coverage.png)
-
+![Coverage results](sources/old_coverage.png)
 
 ### Your own coverage tool
-#### Yaïr Jacob
-_forwardImplementation from pybrain/structure/modules/gaussianlayer.py and whichNeuron from pybrain/structure/modules/lstm.py
-[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/a476662013e86b5b76812ad3ac5328d21afb08ed)
-Code output: \
-
-![Yaïr Jacob](sources/yair_coverage.png)
-
 #### Celal Turkmen
 semilinear(x) and explnPrime(x) from pybrain/tools/functions.py \
+[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/4f6d168feb45c2e99709aa0c82eaede21168f136) \
 Code output: \
-![Celal Coverage](sources/celal_coverage.png) \
+![Celal Coverage](sources/celal_coverage.png)
+
+#### Enis Kerem Cakmak
+addData(self, id0, x, y) and setLineStyle(self, id=None, **kwargs) from pybrain\tools\plotting\multiline.py \
+[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/8638ffb2020cae48d70d25936c0262559df276e0) \
+Code output: \
+![Enis Coverage](sources/enis_coverage.PNG)
 ## Coverage improvement
 
 ### Individual tests
 
-<The following is supposed to be repeated for each group member>
+#### Celal Turkmen
 
-<Group member name>
+Note: Test 1 & 2 are both in the same file, so I did not make it separately.
+[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/7a086fb7b8edb133ca4311066f875acf8ada334f) \
 
-<Test 1>
+Old coverage: \
+![Old Coverage](sources/old_coverage.png)
+New coverage: \
+![New Coverage](sources/celal_improvement.png)
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+Covered statements are increased from 10753 to 10797. This is because test_celal.py file under test/unittest folder includes some test cases covering the statements in tools/functions.py.
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
+#### Enis Kerem Cakmak
 
-<Provide a screenshot of the new coverage results>
+Note: Test 1 & 2 are both in the same file, that is, multiline.py.
+[Relevant commit](https://github.com/24x6fhy/SEP_pybrain/commit/8638ffb2020cae48d70d25936c0262559df276e0) \
 
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
+Old coverage: \
+![Old Coverage](sources/old_coverage.png)
+New coverage: \
+![New Coverage](sources/enis_improvement.png)
 
-<Test 2>
-
-<Provide the same kind of information provided for Test 1>
+As it is seen from the screenshots, the coverage is improved from 10753 to 10822 as a result of the new test cases added under pybrain\tests\unittests\tools\test_enis.py covering the selected function statements in pybrain\tools\plotting\multiline.py.
 
 ### Overall
+Old Coverage:
+![Old Coverage](sources/old_coverage.png)
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
-
-<Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+Final Coverage:
+![Final Coverage](sources/final_coverage.png)
 
 ## Statement of individual contributions
 
-<Write what each group member did>
+### Celal Turkmen
+- Found the project and checked if it meets the requirements.
+- Instrumented the aforementioned functions.
+- Showed the improvement of the coverage thanks to the instrumented functions in the report.
+- Completed my own part in the report.
+
+### Enis Kerem Cakmak
+- Selected the individual functions to be tested.
+- Instrumented the functions with custom coverage tool.
+- Improved existing coverage with the new testcases and instrumented functions added.
+- Finished the necessary report part.
+
+### Yair Jacob
+- None
